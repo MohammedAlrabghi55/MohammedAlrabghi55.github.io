@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohammed Alrabghi | Portfolio</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1220;
+      color: #f8fafc;
+      line-height: 1.7;
+    }
+    nav {
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      background: #111c30;
+    }
+    nav strong { color: #38bdf8; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    nav a:hover { color: #38bdf8; }
+    section { padding: 75px 8%; }
+    .hero { padding-top: 110px; padding-bottom: 110px; }
+    .hero h1 { font-size: clamp(36px, 6vw, 65px); margin: 0; }
+    .hero p { max-width: 650px; color: #cbd5e1; }
+    h2 { color: #38bdf8; font-size: 30px; }
+    .tag { color: #38bdf8; font-weight: bold; }
+    .btn {
+      display: inline-block;
+      background: #38bdf8;
+      color: #0b1220;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #172338;
+      border: 1px solid #293b55;
+      padding: 25px;
+      border-radius: 14px;
+    }
+    .card h3 { margin-top: 0; }
+    .card p { color: #cbd5e1; }
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #293b55;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <strong>MA. Portfolio</strong>
+    <div>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <p class="tag">WELCOME TO MY PORTFOLIO</p>
+    <h1>Mohammed Alrabghi</h1>
+    <h2>Industrial & Systems Engineer</h2>
+    <p>
+      Passionate about continuous improvement,
+      business operations, data analysis,
+      and solving real-world challenges.
+    </p>
+    <a class="btn" href="#about">Explore My Portfolio</a>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am an Industrial & Systems Engineering graduate
+      from the University of Jeddah. I enjoy learning,
+      working with teams, analyzing data, and finding
+      opportunities to improve processes and performance.
+    </p>
+  </section>
+
+  <section id="experience">
+    <h2>Professional Experience</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Bupa Arabia</h3>
+        <p>Sales Support | Tamheer Program</p>
+        <p>Business operations, data validation,
+        reporting, and Excel-based processes.</p>
+      </div>
+      <div class="card">
+        <h3>AQUAT Food Industries</h3>
+        <p>Industrial Engineering | Co-op Training</p>
+        <p>Sanitation operations, team coordination,
+        KPI monitoring, and process improvement.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Academic & Personal Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Energy-Aware Scheduling</h3>
+        <p>Graduation project focused on scheduling
+        optimization and energy efficiency.</p>
+      </div>
+      <div class="card">
+        <h3>Power BI Dashboards</h3>
+        <p>Data visualization, business insights,
+        and interactive performance dashboards.</p>
+      </div>
+      <div class="card">
+        <h3>Simulation & Quality</h3>
+        <p>Academic projects involving simulation,
+        quality control, and operational analysis.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <h2>Certificates & Skills</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Technical Skills</h3>
+        <p>Microsoft Excel, Power BI, Data Analysis,
+        Process Improvement, and Reporting.</p>
+      </div>
+      <div class="card">
+        <h3>Certificates</h3>
+        <p>Professional certifications and
+        training achievements will be added here.</p>
+      </div>
+      <div class="card">
+        <h3>Volunteering</h3>
+        <p>Experience in volunteer initiatives,
+        event organization, and team leadership.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Let's Connect</h2>
+    <p>
+      Interested in connecting, collaborating,
+      or discussing professional opportunities?
+    </p>
+    <p>Add your LinkedIn profile and email here.</p>
+  </section>
+
+  <footer>
+    © 2026 Mohammed Alrabghi. All rights reserved.
+  </footer>
+
+</body>
+</html>
