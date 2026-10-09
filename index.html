@@ -1,321 +1,1477 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohammed Alrabghi | Portfolio</title>
-  <style>
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b1220;
-      color: #f8fafc;
-      line-height: 1.7;
-    }
-    nav {
-      padding: 20px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      background: #111c30;
-    }
-    nav strong { color: #38bdf8; }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-    nav a:hover { color: #38bdf8; }
-    section { padding: 75px 8%; }
-    .hero { padding: 110px 8%; }
-    .hero h1 {
-      font-size: clamp(36px, 6vw, 65px);
-      margin: 0;
-    }
-    .hero p { max-width: 650px; color: #cbd5e1; }
-    h2 { color: #38bdf8; font-size: 30px; }
-    .tag { color: #38bdf8; font-weight: bold; }
-    .btn {
-      display: inline-block;
-      background: #38bdf8;
-      color: #0b1220;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 20px;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: #172338;
-      border: 1px solid #293b55;
-      padding: 25px;
-      border-radius: 14px;
-    }
-    .card h3 { margin-top: 0; }
-    .card p { color: #cbd5e1; }
 
-    /* Certificate gallery */
-    .certificate-card {
-      background: #172338;
-      border: 1px solid #293b55;
-      border-radius: 14px;
-      padding: 18px;
-      transition: transform 0.25s;
-    }
-    .certificate-card:hover {
-      transform: translateY(-5px);
-    }
-    .certificate-card img {
-      display: block;
-      width: 100%;
-      height: 220px;
-      object-fit: contain;
-      background: #0b1220;
-      border-radius: 10px;
-    }
-    .certificate-card h3 {
-      margin: 16px 0 6px;
-    }
-    .certificate-card p {
-      color: #cbd5e1;
-      margin: 5px 0;
-    }
-    .certificate-card a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-    .certificate-card a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      padding: 30px;
-      border-top: 1px solid #293b55;
-      color: #94a3b8;
-    }
-  </style>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="The personal portfolio of Mohammed Alrabghi, an Industrial and Systems Engineering graduate from the University of Jeddah.">
+
+<title>Mohammed Alrabghi | Personal Portfolio</title>
+
+<style>
+
+/* ==============================
+   GENERAL DESIGN
+============================== */
+
+:root {
+  --background: #0b1220;
+  --nav: #111c30;
+  --card: #172338;
+  --accent: #38bdf8;
+  --white: #f8fafc;
+  --muted: #cbd5e1;
+  --border: #293b55;
+  --gold: #f5c76d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  color: var(--white);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--accent);
+}
+
+button {
+  font: inherit;
+}
+
+section {
+  padding: 75px 8%;
+  scroll-margin-top: 30px;
+}
+
+section h2 {
+  color: var(--accent);
+  font-size: clamp(28px, 4vw, 35px);
+  margin-top: 0;
+}
+
+.section-description {
+  max-width: 850px;
+  color: var(--muted);
+}
+
+/* ==============================
+   NAVIGATION
+============================== */
+
+nav {
+  background: var(--nav);
+  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+nav .logo {
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 23px;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* ==============================
+   HERO
+============================== */
+
+.hero {
+  background: linear-gradient(
+    120deg,
+    #0b1220,
+    #102b45
+  );
+
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+.hero h1 {
+  font-size: clamp(40px, 7vw, 78px);
+  line-height: 1.15;
+  margin: 12px 0;
+}
+
+.hero h2 {
+  font-size: clamp(23px, 4vw, 35px);
+}
+
+.hero p {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.hero-label {
+  color: var(--accent);
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--accent);
+  color: #081322;
+  border-radius: 9px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.btn:hover {
+  opacity: .85;
+}
+
+/* ==============================
+   CARDS
+============================== */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 280px), 1fr)
+  );
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 25px;
+  min-width: 0;
+}
+
+.card h3 {
+  margin: 8px 0;
+  font-size: 20px;
+}
+
+.card p,
+.card li {
+  color: var(--muted);
+}
+
+.card ul {
+  padding-left: 20px;
+}
+
+.date {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.award {
+  border-left: 4px solid var(--gold);
+}
+
+.award .date {
+  color: var(--gold);
+}
+
+/* ==============================
+   SKILLS
+============================== */
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.skill-tags span {
+  background: #203551;
+  border: 1px solid #365675;
+  padding: 7px 13px;
+  border-radius: 25px;
+  font-size: 13px;
+}
+
+/* ==============================
+   JOURNEY TIMELINE
+============================== */
+
+.timeline {
+  border-left: 3px solid var(--accent);
+  margin-top: 30px;
+  padding-left: 25px;
+}
+
+.timeline-item {
+  margin-bottom: 40px;
+}
+
+.timeline-item h3 {
+  margin: 5px 0;
+}
+
+.timeline-item p {
+  color: var(--muted);
+  max-width: 850px;
+}
+
+/* ==============================
+   CERTIFICATE GALLERY
+============================== */
+
+.certificate-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  min-width: 0;
+  transition: transform .25s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+.certificate-card h3 {
+  margin: 12px 0 8px;
+  font-size: 19px;
+}
+
+.certificate-card p {
+  color: var(--muted);
+  margin: 6px 0;
+}
+
+.certificate-image {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  background: white;
+  border-radius: 10px;
+  margin: 16px 0;
+}
+
+.certificate-image:hover {
+  opacity: .9;
+}
+
+.view-certificate {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 9px 15px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.view-certificate:hover {
+  color: #081322;
+  background: var(--accent);
+}
+
+.certificate-placeholder {
+  padding: 24px;
+  border-radius: 10px;
+  border: 1px dashed #365675;
+  background: #101d30;
+  color: #9ab8d6;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* ==============================
+   CONTACT AND FOOTER
+============================== */
+
+.contact-link {
+  overflow-wrap: anywhere;
+}
+
+footer {
+  text-align: center;
+  padding: 35px;
+  color: #94a3b8;
+  border-top: 1px solid var(--border);
+}
+
+/* ==============================
+   MOBILE RESPONSIVE
+============================== */
+
+@media (max-width: 650px) {
+
+  nav {
+    padding: 18px 5%;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  section {
+    padding: 55px 5%;
+  }
+
+  .hero {
+    padding: 75px 5%;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .certificate-image {
+    height: 210px;
+  }
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-  <nav>
-    <strong>MA. Portfolio</strong>
-    <div>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+<!-- ==============================
+     NAVIGATION
+============================== -->
 
-  <section class="hero">
-    <p class="tag">WELCOME TO MY PORTFOLIO</p>
-    <h1>Mohammed Alrabghi</h1>
-    <h2>Industrial & Systems Engineer</h2>
-    <p>
-      Passionate about continuous improvement,
-      business operations, data analysis,
-      and solving real-world challenges.
-    </p>
-    <a class="btn" href="#about">
+<nav>
+
+  <a class="logo" href="#home">
+    MA. Portfolio
+  </a>
+
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#leadership">Leadership</a>
+    <a href="#journey">My Journey</a>
+    <a href="#skills">Skills</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#membership">Membership</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+</nav>
+
+
+<!-- ==============================
+     HOME
+============================== -->
+
+<section id="home" class="hero">
+
+  <p class="hero-label">
+    WELCOME TO MY PERSONAL PORTFOLIO
+  </p>
+
+  <h1>Mohammed Alrabghi</h1>
+
+  <h2>Industrial & Systems Engineer</h2>
+
+  <p>
+    Industrial and Systems Engineering graduate
+    passionate about operational excellence,
+    process improvement, data analysis,
+    optimization, and continuous learning.
+  </p>
+
+  <p>
+    Explore my professional experience,
+    academic projects, achievements,
+    volunteering, and personal development journey.
+  </p>
+
+  <div class="buttons">
+
+    <a href="#about" class="btn">
       Explore My Portfolio
     </a>
-  </section>
 
-  <section id="about">
-    <h2>About Me</h2>
+    <a href="#projects" class="btn btn-outline">
+      View Projects
+    </a>
+
+    <a href="#certificates" class="btn btn-outline">
+      My Certificates
+    </a>
+
+    <a
+      href="Mohammed_Alrabghi_CV.pdf"
+      class="btn btn-outline"
+      download>
+      Download CV
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ==============================
+     ABOUT ME
+============================== -->
+
+<section id="about">
+
+  <h2>About Me</h2>
+
+  <p class="section-description">
+    I am an Industrial and Systems Engineering
+    graduate from the University of Jeddah,
+    with experience in operations,
+    process improvement, data analysis,
+    and optimization.
+  </p>
+
+  <p class="section-description">
+    Skilled in Microsoft Excel, Power BI,
+    GAMS Studio, and problem solving,
+    with practical experience in manufacturing
+    and operational environments.
+  </p>
+
+  <p class="section-description">
+    I am a strong communicator with a
+    continuous-learning mindset and a passion
+    for improving efficiency, solving real-world
+    challenges, and supporting organizational
+    performance.
+  </p>
+
+  <div class="skill-tags">
+    <span>Operations</span>
+    <span>Engineering</span>
+    <span>Data Analysis</span>
+    <span>Process Improvement</span>
+    <span>Optimization</span>
+    <span>Continuous Learning</span>
+  </div>
+
+</section>
+
+
+<!-- ==============================
+     EDUCATION
+============================== -->
+
+<section id="education">
+
+  <h2>Education</h2>
+
+  <div class="card">
+
+    <p class="date">2020 – MAY 2025</p>
+
+    <h3>
+      Bachelor of Science in
+      Industrial and Systems Engineering
+    </h3>
+
     <p>
-      I am an Industrial & Systems Engineering graduate
-      from the University of Jeddah. I enjoy learning,
-      working with teams, analyzing data, and finding
-      opportunities to improve processes and performance.
+      University of Jeddah,
+      Saudi Arabia
     </p>
-  </section>
 
-  <section id="experience">
-    <h2>Professional Experience</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Bupa Arabia</h3>
-        <p>Sales Support | Tamheer Program</p>
-        <p>
-          Business operations, data validation,
+    <p>
+      <strong>GPA: 4.31 / 5.0</strong>
+    </p>
+
+    <p>Second-Class Honours</p>
+
+  </div>
+
+</section>
+
+
+<!-- ==============================
+     PROFESSIONAL EXPERIENCE
+============================== -->
+
+<section id="experience">
+
+  <h2>Professional Experience</h2>
+
+  <div class="cards">
+
+    <!-- BUPA -->
+
+    <article class="card">
+
+      <p class="date">JUNE 2026 – PRESENT</p>
+
+      <h3>Bupa Arabia</h3>
+
+      <p>
+        <strong>
+          Sales Support | Tamheer Program
+        </strong>
+      </p>
+
+      <ul>
+
+        <li>
+          Supported business operations
+          and sales support processes.
+        </li>
+
+        <li>
+          Worked with data validation,
           reporting, and Excel-based processes.
-        </p>
+        </li>
+
+        <li>
+          Gained experience in corporate operations,
+          communication, and teamwork.
+        </li>
+
+      </ul>
+
+    </article>
+
+    <!-- AQUAT -->
+
+    <article class="card">
+
+      <p class="date">
+        JUNE 2025 – AUGUST 2025
+      </p>
+
+      <h3>AQUAT Food Industries</h3>
+
+      <p>
+        <strong>Operations Intern</strong>
+      </p>
+
+      <ul>
+
+        <li>
+          Coordinated with Quality and Maintenance
+          teams to ensure production areas
+          were ready for daily operations.
+        </li>
+
+        <li>
+          Monitored workflows across multiple
+          areas and reported operational issues
+          to the supervisor.
+        </li>
+
+        <li>
+          Improved operational efficiency by
+          analyzing work routines.
+        </li>
+
+        <li>
+          Maintained compliance with safety
+          and food standards.
+        </li>
+
+      </ul>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ==============================
+     GRADUATION PROJECT
+============================== -->
+
+<section id="projects">
+
+  <h2>Academic Projects & Achievements</h2>
+
+  <div class="cards">
+
+    <!-- GRADUATION PROJECT -->
+
+    <article class="card">
+
+      <p class="date">NOVEMBER 2025</p>
+
+      <h3>
+        Energy-Aware Production
+        Scheduling Optimization
+      </h3>
+
+      <p>
+        <strong>
+          Graduation Project —
+          University of Jeddah
+        </strong>
+      </p>
+
+      <p>
+        Operations Research & GAMS
+      </p>
+
+      <ul>
+
+        <li>
+          Developed a multi-objective model
+          to minimize completion time,
+          energy cost, and machine
+          energy consumption.
+        </li>
+
+        <li>
+          Built and tested optimization
+          scenarios under Time-of-Use
+          (TOU) tariffs using GAMS.
+        </li>
+
+        <li>
+          Analyzed Pareto trade-offs
+          and selected the best schedule
+          using AHP.
+        </li>
+
+      </ul>
+
+    </article>
+
+    <!-- ITEX -->
+
+    <article class="card award">
+
+      <p class="date">
+        MAY 2025 — MALAYSIA
+      </p>
+
+      <h3>ITEX 2025 — Silver Medal</h3>
+
+      <p>
+        <strong>OPTIMORE</strong>
+      </p>
+
+      <p>
+        Awarded the Silver Medal
+        at the International Invention,
+        Innovation & Technology Competition.
+      </p>
+
+      <p>
+        Recognition for innovation
+        and engineering optimization.
+      </p>
+
+    </article>
+
+    <!-- POWER BI -->
+
+    <article class="card">
+
+      <h3>Power BI Dashboards</h3>
+
+      <p>
+        Developed dashboards focusing on
+        data visualization, performance
+        analysis, and business insights.
+      </p>
+
+    </article>
+
+    <!-- SIMULATION -->
+
+    <article class="card">
+
+      <h3>Simulation & Quality Control</h3>
+
+      <p>
+        Academic projects involving
+        simulation, quality control,
+        process analysis, and
+        operational improvement.
+      </p>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ==============================
+     LEADERSHIP & VOLUNTEERING
+============================== -->
+
+<section id="leadership">
+
+  <h2>Leadership & Volunteer Experience</h2>
+
+  <div class="cards">
+
+    <!-- ENGINEERING CLUB -->
+
+    <article class="card">
+
+      <p class="date">
+        JANUARY 2025 – MAY 2025
+      </p>
+
+      <h3>
+        Industrial Engineering Coordinator
+      </h3>
+
+      <p>
+        UJ Engineering Club
+      </p>
+
+      <ul>
+
+        <li>
+          Coordinated industrial
+          engineering activities
+          during university events.
+        </li>
+
+        <li>
+          Supported communication
+          with engineers, visitors,
+          and students.
+        </li>
+
+      </ul>
+
+    </article>
+
+    <!-- PILGRIM GUIDANCE -->
+
+    <article class="card">
+
+      <p class="date">
+        MARCH 2024 – MAY 2025
+      </p>
+
+      <h3>
+        Pilgrim Guidance Specialist
+      </h3>
+
+      <p>
+        Aknaf Al-Harmain Team
+      </p>
+
+      <ul>
+
+        <li>
+          Guided and supported
+          large groups of pilgrims.
+        </li>
+
+        <li>
+          Helped ensure a smooth
+          and organized journey.
+        </li>
+
+      </ul>
+
+    </article>
+
+    <!-- AOUN -->
+
+    <article class="card">
+
+      <p class="date">AUGUST 2024</p>
+
+      <h3>Aoun Volunteer Team</h3>
+
+      <p>
+        Received recognition for
+        distinguished volunteering,
+        active participation,
+        and team leadership.
+      </p>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ==============================
+     MY JOURNEY
+============================== -->
+
+<section id="journey">
+
+  <h2>My Journey</h2>
+
+  <p class="section-description">
+    Beyond my professional and academic
+    experiences, I have been involved
+    in volunteering, industry events,
+    university activities, and leadership
+    opportunities that have shaped
+    my personal development.
+  </p>
+
+  <div class="timeline">
+
+    <!-- CONSULTING -->
+
+    <article class="timeline-item">
+
+      <p class="date">
+        8 OCTOBER 2023
+      </p>
+
+      <h3>
+        A Path to a Career in Consulting
+      </h3>
+
+      <p>
+        Attended a panel discussion
+        organized by the Industrial
+        Engineering Club at the
+        University of Jeddah.
+      </p>
+
+      <p>
+        The session provided insights
+        into consulting careers
+        and professional development.
+      </p>
+
+    </article>
+
+    <!-- LOGISTICS -->
+
+    <article class="timeline-item">
+
+      <p class="date">INDUSTRY EVENT</p>
+
+      <h3>
+        International Logistics Conference
+      </h3>
+
+      <p>
+        Attended the International
+        Logistics Conference,
+        exploring developments,
+        opportunities, and innovation
+        within the logistics industry.
+      </p>
+
+      <p>
+        The conference highlighted
+        developments in logistics
+        in connection with Saudi Vision 2030.
+      </p>
+
+      <p>
+        The event was held under the
+        patronage of Prince Khalid Al-Faisal,
+        Governor of the Makkah Region.
+      </p>
+
+    </article>
+
+    <!-- PILGRIM SERVICES -->
+
+    <article class="timeline-item">
+
+      <p class="date">VOLUNTEERING</p>
+
+      <h3>
+        Meccan Furqan Campaign
+      </h3>
+
+      <p>
+        Participated in serving pilgrims
+        in Mina through administrative
+        and logistical coordination.
+      </p>
+
+      <p>
+        Responsibilities included
+        organizing accommodation,
+        overseeing transportation,
+        coordinating schedules,
+        and addressing operational issues.
+      </p>
+
+      <p>
+        The experience strengthened
+        my teamwork, communication,
+        and operational coordination skills.
+      </p>
+
+    </article>
+
+    <!-- AOUN RECOGNITION -->
+
+    <article class="timeline-item">
+
+      <p class="date">AUGUST 2024</p>
+
+      <h3>
+        Outstanding Volunteer Recognition
+      </h3>
+
+      <p>
+        Recognized by the Aoun Volunteer
+        Team for distinguished participation,
+        contribution, and leadership.
+      </p>
+
+    </article>
+
+    <!-- ENGINEERING CLUB -->
+
+    <article class="timeline-item">
+
+      <p class="date">2025</p>
+
+      <h3>
+        University Engineering Activities
+      </h3>
+
+      <p>
+        Participated in engineering
+        activities and university events,
+        supporting students and visitors
+        and communicating with engineers.
+      </p>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ==============================
+     SKILLS
+============================== -->
+
+<section id="skills">
+
+  <h2>Skills & Languages</h2>
+
+  <div class="cards">
+
+    <article class="card">
+
+      <h3>Technical Skills</h3>
+
+      <div class="skill-tags">
+        <span>Microsoft Excel</span>
+        <span>Power BI</span>
+        <span>GAMS Studio</span>
+        <span>Microsoft Office</span>
+        <span>Data Analysis</span>
+        <span>Optimization</span>
       </div>
 
-      <div class="card">
-        <h3>AQUAT Food Industries</h3>
-        <p>Industrial Engineering | Co-op Training</p>
-        <p>
-          Sanitation operations, team coordination,
-          KPI monitoring, and process improvement.
-        </p>
-      </div>
-    </div>
-  </section>
+    </article>
 
-  <section id="projects">
-    <h2>Academic & Personal Projects</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Energy-Aware Scheduling</h3>
-        <p>
-          Graduation project focused on scheduling
-          optimization and energy efficiency.
-        </p>
+    <article class="card">
+
+      <h3>Professional Skills</h3>
+
+      <div class="skill-tags">
+        <span>Problem Solving</span>
+        <span>Communication</span>
+        <span>Time Management</span>
+        <span>Teamwork</span>
       </div>
 
-      <div class="card">
-        <h3>Power BI Dashboards</h3>
-        <p>
-          Data visualization, business insights,
-          and interactive performance dashboards.
-        </p>
+    </article>
+
+    <article class="card">
+
+      <h3>Languages</h3>
+
+      <div class="skill-tags">
+        <span>Arabic</span>
+        <span>English</span>
       </div>
 
-      <div class="card">
-        <h3>Simulation & Quality</h3>
-        <p>
-          Academic projects involving simulation,
-          quality control, and operational analysis.
-        </p>
-      </div>
-    </div>
-  </section>
+    </article>
 
-  <section id="certificates">
-    <h2>Certificates & Achievements</h2>
-    <p>
-      A collection of certificates recognizing my
-      learning, volunteering, and academic involvement.
+  </div>
+
+</section>
+
+
+<!-- ==============================
+     CERTIFICATES WITH IMAGES
+============================== -->
+
+<section id="certificates">
+
+  <h2>Certificates & Achievements</h2>
+
+  <p class="section-description">
+    A collection of my professional,
+    academic, training, and volunteer
+    certificates. Click on a certificate
+    image to view it in full size.
+  </p>
+
+  <div class="cards">
+
+
+    <!-- ======================
+         CERTIFICATE 1
+         CONSULTING PANEL
+    ====================== -->
+
+    <article class="certificate-card">
+
+      <p class="date">OCTOBER 2023</p>
+
+      <h3>
+        A Path to a Career in Consulting
+      </h3>
+
+      <p>
+        Industrial Engineering Club
+      </p>
+
+      <p>
+        University of Jeddah
+      </p>
+
+      <a
+        href="WhatsApp%20Image%202026-10-09%20at%202.56.58%20PM.jpeg"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <img
+          class="certificate-image"
+          src="WhatsApp%20Image%202026-10-09%20at%202.56.58%20PM.jpeg"
+          alt="A Path to a Career in Consulting Certificate"
+          loading="lazy">
+
+      </a>
+
+      <a
+        class="view-certificate"
+        href="WhatsApp%20Image%202026-10-09%20at%202.56.58%20PM.jpeg"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        View Certificate ↗
+
+      </a>
+
+    </article>
+
+
+    <!-- ======================
+         CERTIFICATE 2
+         AOUN VOLUNTEER
+    ====================== -->
+
+    <article class="certificate-card">
+
+      <p class="date">AUGUST 2024</p>
+
+      <h3>
+        Outstanding Volunteer Recognition
+      </h3>
+
+      <p>Aoun Volunteer Team</p>
+
+      <p>
+        Recognition for distinguished
+        volunteer participation
+        and team leadership.
+      </p>
+
+      <a
+        href="WhatsApp%20Image%202026-10-09%20at%203.04.03%20PM.jpeg"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <img
+          class="certificate-image"
+          src="WhatsApp%20Image%202026-10-09%20at%203.04.03%20PM.jpeg"
+          alt="Aoun Volunteer Recognition Certificate"
+          loading="lazy">
+
+      </a>
+
+      <a
+        class="view-certificate"
+        href="WhatsApp%20Image%202026-10-09%20at%203.04.03%20PM.jpeg"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        View Certificate ↗
+
+      </a>
+
+    </article>
+
+
+    <!-- ======================
+         CERTIFICATE 3
+         SUPPLY CHAIN
+    ====================== -->
+
+    <article class="certificate-card">
+
+      <p class="date">24 TRAINING HOURS</p>
+
+      <h3>
+        Principles of Supply Chain Management
+      </h3>
+
+      <p>
+        Middle East Logistics High Institute
+      </p>
+
+      <p>In-Person Training</p>
+
+      <a
+        href="WhatsApp%20Image%202026-10-09%20at%203.04.04%20PM.jpeg"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <img
+          class="certificate-image"
+          src="WhatsApp%20Image%202026-10-09%20at%203.04.04%20PM.jpeg"
+          alt="Supply Chain Management Certificate"
+          loading="lazy">
+
+      </a>
+
+      <a
+        class="view-certificate"
+        href="WhatsApp%20Image%202026-10-09%20at%203.04.04%20PM.jpeg"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        View Certificate ↗
+
+      </a>
+
+    </article>
+
+
+    <!-- ======================
+         CERTIFICATE 4
+         ENGINEERING AND ITS MAJORS
+    ====================== -->
+
+    <article class="certificate-card">
+
+      <p class="date">MARCH 2025</p>
+
+      <h3>Engineering and Its Majors</h3>
+
+      <p>UJ Engineering Club</p>
+
+      <p>University of Jeddah</p>
+
+      <p>One Training Hour</p>
+
+      <a
+        href="WhatsApp%20Image%202026-10-09%20at%203.06.15%20PM.jpeg"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <img
+          class="certificate-image"
+          src="WhatsApp%20Image%202026-10-09%20at%203.06.15%20PM.jpeg"
+          alt="Engineering and Its Majors Certificate"
+          loading="lazy">
+
+      </a>
+
+      <a
+        class="view-certificate"
+        href="WhatsApp%20Image%202026-10-09%20at%203.06.15%20PM.jpeg"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        View Certificate ↗
+
+      </a>
+
+    </article>
+
+
+    <!-- ======================
+         CERTIFICATE 5
+         POWER BI
+    ====================== -->
+
+    <article class="certificate-card">
+
+      <p class="date">AUGUST 2026</p>
+
+      <h3>
+        Power BI Data Modelling with DAX
+      </h3>
+
+      <p>Simplilearn</p>
+
+      <div class="certificate-placeholder">
+        Certificate image to be added later.
+      </div>
+
+    </article>
+
+
+    <!-- ======================
+         CERTIFICATE 6
+         ENGLISH COURSE
+    ====================== -->
+
+    <article class="certificate-card">
+
+      <p class="date">
+        DECEMBER 2025 – APRIL 2026
+      </p>
+
+      <h3>English Language Course</h3>
+
+      <p>
+        ELC Bristol
+      </p>
+
+      <p>United Kingdom</p>
+
+      <div class="certificate-placeholder">
+        Certificate image to be added later.
+      </div>
+
+    </article>
+
+
+    <!-- ======================
+         CERTIFICATE 7
+         MICROSOFT OFFICE
+    ====================== -->
+
+    <article class="certificate-card">
+
+      <p class="date">FEBRUARY 2026</p>
+
+      <h3>
+        Excel, Outlook & PowerPoint
+      </h3>
+
+      <p>Aanaab</p>
+
+      <div class="certificate-placeholder">
+        Certificate image to be added later.
+      </div>
+
+    </article>
+
+
+    <!-- ======================
+         CERTIFICATE 8
+         STRATEGIC MANAGEMENT
+    ====================== -->
+
+    <article class="certificate-card">
+
+      <p class="date">NOVEMBER 2025</p>
+
+      <h3>Strategic Management</h3>
+
+      <p>Alison</p>
+
+      <div class="certificate-placeholder">
+        Certificate image to be added later.
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ==============================
+     PROFESSIONAL MEMBERSHIP
+============================== -->
+
+<section id="membership">
+
+  <h2>Professional Membership</h2>
+
+  <article class="card">
+
+    <p class="date">
+      MAY 2024 – PRESENT
     </p>
 
-    <div class="cards">
+    <h3>
+      Saudi Council of Engineers (SCE)
+    </h3>
 
-      <!-- Certificate 1 -->
-      <div class="certificate-card">
-        <a href="WhatsApp Image 2026-10-09 at 2.56.58 PM.jpeg"
-           target="_blank" rel="noopener noreferrer">
-          <img
-            src="WhatsApp Image 2026-10-09 at 2.56.58 PM.jpeg"
-            alt="Consulting Career Panel Certificate"
-            loading="lazy">
-        </a>
-        <h3>A Path to a Career in Consulting</h3>
-        <p>Industrial Engineering Club</p>
-        <p>University of Jeddah | October 2023</p>
-        <a href="WhatsApp Image 2026-10-09 at 2.56.58 PM.jpeg"
-           target="_blank" rel="noopener noreferrer">
-          View Certificate ↗
-        </a>
-      </div>
-
-      <!-- Certificate 2 -->
-      <div class="certificate-card">
-        <a href="WhatsApp Image 2026-10-09 at 3.04.03 PM.jpeg"
-           target="_blank" rel="noopener noreferrer">
-          <img
-            src="WhatsApp Image 2026-10-09 at 3.04.03 PM.jpeg"
-            alt="Outstanding Volunteer Recognition"
-            loading="lazy">
-        </a>
-        <h3>Outstanding Volunteer Recognition</h3>
-        <p>Aoun Volunteer Team</p>
-        <p>August 2024</p>
-        <p>
-          Recognition for outstanding volunteering
-          and team leadership.
-        </p>
-        <a href="WhatsApp Image 2026-10-09 at 3.04.03 PM.jpeg"
-           target="_blank" rel="noopener noreferrer">
-          View Certificate ↗
-        </a>
-      </div>
-
-      <!-- Certificate 3 -->
-      <div class="certificate-card">
-        <a href="WhatsApp Image 2026-10-09 at 3.04.04 PM.jpeg"
-           target="_blank" rel="noopener noreferrer">
-          <img
-            src="WhatsApp Image 2026-10-09 at 3.04.04 PM.jpeg"
-            alt="Supply Chain Management Certificate"
-            loading="lazy">
-        </a>
-        <h3>Principles of Supply Chain Management</h3>
-        <p>Middle East Logistics High Institute</p>
-        <p>24 Training Hours | In-Person</p>
-        <a href="WhatsApp Image 2026-10-09 at 3.04.04 PM.jpeg"
-           target="_blank" rel="noopener noreferrer">
-          View Certificate ↗
-        </a>
-      </div>
-
-      <!-- Certificate 4 -->
-      <div class="certificate-card">
-        <a href="WhatsApp Image 2026-10-09 at 3.06.15 PM.jpeg"
-           target="_blank" rel="noopener noreferrer">
-          <img
-            src="WhatsApp Image 2026-10-09 at 3.06.15 PM.jpeg"
-            alt="Engineering and Its Majors Certificate"
-            loading="lazy">
-        </a>
-        <h3>Engineering and Its Majors</h3>
-        <p>UJ Engineering Club</p>
-        <p>March 2025 | 1 Training Hour</p>
-        <a href="WhatsApp Image 2026-10-09 at 3.06.15 PM.jpeg"
-           target="_blank" rel="noopener noreferrer">
-          View Certificate ↗
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2>Skills & Volunteering</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Technical Skills</h3>
-        <p>
-          Microsoft Excel, Power BI,
-          Data Analysis, Process Improvement,
-          and Reporting.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Volunteering</h3>
-        <p>
-          Experience in volunteer initiatives,
-          event organization, and team leadership.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Let's Connect</h2>
     <p>
-      Interested in connecting, collaborating,
-      or discussing professional opportunities?
+      Professional Accreditation —
+      Industrial Engineering
     </p>
-    <p>Add your LinkedIn profile and email here.</p>
-  </section>
 
-  <footer>
-    © 2026 Mohammed Alrabghi. All rights reserved.
-  </footer>
+  </article>
+
+</section>
+
+
+<!-- ==============================
+     CONTACT
+============================== -->
+
+<section id="contact">
+
+  <h2>Let's Connect</h2>
+
+  <p class="section-description">
+    Interested in professional opportunities,
+    collaboration, or sharing ideas?
+    Feel free to get in touch.
+  </p>
+
+  <div class="cards">
+
+    <!-- EMAIL -->
+
+    <div class="card">
+
+      <h3>Email</h3>
+
+      <a
+        class="contact-link"
+        href="mailto:Mohammed.k.alrabghi@gmail.com">
+
+        Mohammed.k.alrabghi@gmail.com
+
+      </a>
+
+    </div>
+
+    <!-- GITHUB -->
+
+    <div class="card">
+
+      <h3>GitHub</h3>
+
+      <a
+        class="contact-link"
+        href="https://github.com/MohammedAlrabghi55"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        MohammedAlrabghi55 ↗
+
+      </a>
+
+    </div>
+
+    <!-- LOCATION -->
+
+    <div class="card">
+
+      <h3>Location</h3>
+
+      <p>Saudi Arabia</p>
+
+    </div>
+
+  </div>
+
+  <div class="buttons">
+
+    <a
+      href="Mohammed_Alrabghi_CV.pdf"
+      class="btn"
+      download>
+
+      Download My CV
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ==============================
+     FOOTER
+============================== -->
+
+<footer>
+
+  © 2026 Mohammed Alrabghi.
+  All Rights Reserved.
+
+</footer>
 
 </body>
 </html>
-
