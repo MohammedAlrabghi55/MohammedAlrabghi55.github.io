@@ -32,8 +32,11 @@
     }
     nav a:hover { color: #38bdf8; }
     section { padding: 75px 8%; }
-    .hero { padding-top: 110px; padding-bottom: 110px; }
-    .hero h1 { font-size: clamp(36px, 6vw, 65px); margin: 0; }
+    .hero { padding: 110px 8%; }
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 65px);
+      margin: 0;
+    }
     .hero p { max-width: 650px; color: #cbd5e1; }
     h2 { color: #38bdf8; font-size: 30px; }
     .tag { color: #38bdf8; font-weight: bold; }
@@ -60,6 +63,40 @@
     }
     .card h3 { margin-top: 0; }
     .card p { color: #cbd5e1; }
+
+    /* Certificate gallery */
+    .certificate-card {
+      background: #172338;
+      border: 1px solid #293b55;
+      border-radius: 14px;
+      padding: 18px;
+      transition: transform 0.25s;
+    }
+    .certificate-card:hover {
+      transform: translateY(-5px);
+    }
+    .certificate-card img {
+      display: block;
+      width: 100%;
+      height: 220px;
+      object-fit: contain;
+      background: #0b1220;
+      border-radius: 10px;
+    }
+    .certificate-card h3 {
+      margin: 16px 0 6px;
+    }
+    .certificate-card p {
+      color: #cbd5e1;
+      margin: 5px 0;
+    }
+    .certificate-card a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    .certificate-card a:hover {
+      text-decoration: underline;
+    }
     footer {
       text-align: center;
       padding: 30px;
@@ -90,7 +127,9 @@
       business operations, data analysis,
       and solving real-world challenges.
     </p>
-    <a class="btn" href="#about">Explore My Portfolio</a>
+    <a class="btn" href="#about">
+      Explore My Portfolio
+    </a>
   </section>
 
   <section id="about">
@@ -109,14 +148,19 @@
       <div class="card">
         <h3>Bupa Arabia</h3>
         <p>Sales Support | Tamheer Program</p>
-        <p>Business operations, data validation,
-        reporting, and Excel-based processes.</p>
+        <p>
+          Business operations, data validation,
+          reporting, and Excel-based processes.
+        </p>
       </div>
+
       <div class="card">
         <h3>AQUAT Food Industries</h3>
         <p>Industrial Engineering | Co-op Training</p>
-        <p>Sanitation operations, team coordination,
-        KPI monitoring, and process improvement.</p>
+        <p>
+          Sanitation operations, team coordination,
+          KPI monitoring, and process improvement.
+        </p>
       </div>
     </div>
   </section>
@@ -126,39 +170,135 @@
     <div class="cards">
       <div class="card">
         <h3>Energy-Aware Scheduling</h3>
-        <p>Graduation project focused on scheduling
-        optimization and energy efficiency.</p>
+        <p>
+          Graduation project focused on scheduling
+          optimization and energy efficiency.
+        </p>
       </div>
+
       <div class="card">
         <h3>Power BI Dashboards</h3>
-        <p>Data visualization, business insights,
-        and interactive performance dashboards.</p>
+        <p>
+          Data visualization, business insights,
+          and interactive performance dashboards.
+        </p>
       </div>
+
       <div class="card">
         <h3>Simulation & Quality</h3>
-        <p>Academic projects involving simulation,
-        quality control, and operational analysis.</p>
+        <p>
+          Academic projects involving simulation,
+          quality control, and operational analysis.
+        </p>
       </div>
     </div>
   </section>
 
   <section id="certificates">
-    <h2>Certificates & Skills</h2>
+    <h2>Certificates & Achievements</h2>
+    <p>
+      A collection of certificates recognizing my
+      learning, volunteering, and academic involvement.
+    </p>
+
+    <div class="cards">
+
+      <!-- Certificate 1 -->
+      <div class="certificate-card">
+        <a href="WhatsApp Image 2026-10-09 at 2.56.58 PM.jpeg"
+           target="_blank" rel="noopener noreferrer">
+          <img
+            src="WhatsApp Image 2026-10-09 at 2.56.58 PM.jpeg"
+            alt="Consulting Career Panel Certificate"
+            loading="lazy">
+        </a>
+        <h3>A Path to a Career in Consulting</h3>
+        <p>Industrial Engineering Club</p>
+        <p>University of Jeddah | October 2023</p>
+        <a href="WhatsApp Image 2026-10-09 at 2.56.58 PM.jpeg"
+           target="_blank" rel="noopener noreferrer">
+          View Certificate ↗
+        </a>
+      </div>
+
+      <!-- Certificate 2 -->
+      <div class="certificate-card">
+        <a href="WhatsApp Image 2026-10-09 at 3.04.03 PM.jpeg"
+           target="_blank" rel="noopener noreferrer">
+          <img
+            src="WhatsApp Image 2026-10-09 at 3.04.03 PM.jpeg"
+            alt="Outstanding Volunteer Recognition"
+            loading="lazy">
+        </a>
+        <h3>Outstanding Volunteer Recognition</h3>
+        <p>Aoun Volunteer Team</p>
+        <p>August 2024</p>
+        <p>
+          Recognition for outstanding volunteering
+          and team leadership.
+        </p>
+        <a href="WhatsApp Image 2026-10-09 at 3.04.03 PM.jpeg"
+           target="_blank" rel="noopener noreferrer">
+          View Certificate ↗
+        </a>
+      </div>
+
+      <!-- Certificate 3 -->
+      <div class="certificate-card">
+        <a href="WhatsApp Image 2026-10-09 at 3.04.04 PM.jpeg"
+           target="_blank" rel="noopener noreferrer">
+          <img
+            src="WhatsApp Image 2026-10-09 at 3.04.04 PM.jpeg"
+            alt="Supply Chain Management Certificate"
+            loading="lazy">
+        </a>
+        <h3>Principles of Supply Chain Management</h3>
+        <p>Middle East Logistics High Institute</p>
+        <p>24 Training Hours | In-Person</p>
+        <a href="WhatsApp Image 2026-10-09 at 3.04.04 PM.jpeg"
+           target="_blank" rel="noopener noreferrer">
+          View Certificate ↗
+        </a>
+      </div>
+
+      <!-- Certificate 4 -->
+      <div class="certificate-card">
+        <a href="WhatsApp Image 2026-10-09 at 3.06.15 PM.jpeg"
+           target="_blank" rel="noopener noreferrer">
+          <img
+            src="WhatsApp Image 2026-10-09 at 3.06.15 PM.jpeg"
+            alt="Engineering and Its Majors Certificate"
+            loading="lazy">
+        </a>
+        <h3>Engineering and Its Majors</h3>
+        <p>UJ Engineering Club</p>
+        <p>March 2025 | 1 Training Hour</p>
+        <a href="WhatsApp Image 2026-10-09 at 3.06.15 PM.jpeg"
+           target="_blank" rel="noopener noreferrer">
+          View Certificate ↗
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills & Volunteering</h2>
     <div class="cards">
       <div class="card">
         <h3>Technical Skills</h3>
-        <p>Microsoft Excel, Power BI, Data Analysis,
-        Process Improvement, and Reporting.</p>
-      </div>
-      <div class="card">
-        <h3>Certificates</h3>
-        <p>Professional certifications and
-        training achievements will be added here.</p>
+        <p>
+          Microsoft Excel, Power BI,
+          Data Analysis, Process Improvement,
+          and Reporting.
+        </p>
       </div>
       <div class="card">
         <h3>Volunteering</h3>
-        <p>Experience in volunteer initiatives,
-        event organization, and team leadership.</p>
+        <p>
+          Experience in volunteer initiatives,
+          event organization, and team leadership.
+        </p>
       </div>
     </div>
   </section>
@@ -178,3 +318,4 @@
 
 </body>
 </html>
+
