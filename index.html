@@ -70,7 +70,7 @@ section {
 
 section h2 {
   color: var(--blue);
-  font-size: clamp(28px,4vw,35px);
+  font-size: clamp(28px, 4vw, 35px);
   margin-top: 0;
 }
 
@@ -80,7 +80,7 @@ section h2 {
 }
 
 .hero {
-  background: linear-gradient(120deg,#0b1220,#102b45);
+  background: linear-gradient(120deg, #0b1220, #102b45);
   min-height: 75vh;
   padding: 110px 8%;
   display: flex;
@@ -89,13 +89,13 @@ section h2 {
 }
 
 .hero h1 {
-  font-size: clamp(40px,7vw,78px);
+  font-size: clamp(40px, 7vw, 78px);
   margin: 12px 0;
   line-height: 1.15;
 }
 
 .hero h2 {
-  font-size: clamp(23px,4vw,35px);
+  font-size: clamp(23px, 4vw, 35px);
 }
 
 .hero p {
@@ -139,7 +139,10 @@ section h2 {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(min(100%,280px),1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 280px), 1fr)
+  );
   gap: 22px;
   margin-top: 25px;
 }
@@ -189,12 +192,13 @@ section h2 {
 
 .timeline-item { margin-bottom: 40px; }
 .timeline-item h3 { margin: 5px 0; }
+
 .timeline-item p {
   color: var(--muted);
   max-width: 850px;
 }
 
-/* CERTIFICATES */
+/* CERTIFICATE GALLERY */
 
 .certificate-card {
   background: var(--card);
@@ -268,7 +272,7 @@ footer {
   color: #94a3b8;
 }
 
-@media (max-width:650px) {
+@media (max-width: 650px) {
   nav { padding: 18px 5%; }
   .nav-links { gap: 10px; }
   .nav-links a { font-size: 12px; }
@@ -286,6 +290,7 @@ footer {
 
 <nav>
   <a href="#home" class="logo">MA. Portfolio</a>
+
   <div class="nav-links">
     <a href="#home">Home</a>
     <a href="#about">About</a>
@@ -307,7 +312,7 @@ footer {
   <p class="eyebrow">Welcome to My Personal Portfolio</p>
 
   <h1>Mohammed Alrabghi</h1>
-  <h2>Industrial & Systems Engineer</h2>
+  <h2>Industrial &amp; Systems Engineer</h2>
 
   <p>
     Driven by curiosity. Inspired by challenges.
@@ -317,8 +322,8 @@ footer {
   <p>
     My journey is about more than engineering.
     It is about learning, exploring opportunities,
-    turning ideas into action, and making a meaningful
-    impact wherever I go.
+    turning ideas into action, and making a
+    meaningful impact wherever I go.
   </p>
 
   <div class="buttons">
@@ -327,7 +332,7 @@ footer {
     <a href="#certificates" class="btn btn-outline">Certificates</a>
     <a href="Mohammed_Alrabghi_CV.pdf"
        class="btn btn-outline" download>
-       Download CV
+      Download CV
     </a>
   </div>
 </section>
@@ -365,9 +370,9 @@ footer {
   <p class="section-description">
     I enjoy working with people, exchanging knowledge,
     taking on challenges, and stepping outside my
-    comfort zone. My goal is simple: to continue
-    learning, build meaningful experiences, and
-    contribute wherever I can.
+    comfort zone. My goal is simple: to continue learning,
+    build meaningful experiences, and contribute
+    wherever I can.
   </p>
 
   <div class="tags">
@@ -377,7 +382,7 @@ footer {
     <span>Innovation</span>
     <span>Teamwork</span>
     <span>Problem Solving</span>
-    <span>Learning & Sharing</span>
+    <span>Learning &amp; Sharing</span>
   </div>
 </section>
 
@@ -386,52 +391,19 @@ footer {
 <section id="education">
   <h2>Education</h2>
 
-  <div class="cards">
-
-    <article class="card">
-      <p class="date">2020 – May 2025</p>
-      <h3>
-        Bachelor of Science in Industrial
-        and Systems Engineering
-      </h3>
-      <p>University of Jeddah, Saudi Arabia</p>
-      <p><strong>GPA: 4.31 / 5.0</strong></p>
-      <p>Second-Class Honours</p>
-    </article>
-
-    <article class="card">
-      <p class="date">June 2022 – August 2022</p>
-      <h3>Oxford International English School</h3>
-      <p>United Kingdom</p>
-      <p>
-        An international English language learning
-        experience focused on improving communication,
-        language skills, and confidence in an
-        English-speaking environment.
-      </p>
-      <div class="placeholder">
-        Oxford International English School
-        certificate will be added later.
-      </div>
-    </article>
-
-    <article class="card">
-      <p class="date">December 2025 – April 2026</p>
-      <h3>ELC Bristol</h3>
-      <p>United Kingdom</p>
-      <p>
-        English language studies supporting
-        communication and personal development.
-      </p>
-      <div class="placeholder">
-        English course certificate will be added later.
-      </div>
-    </article>
-
-  </div>
+  <article class="card">
+    <p class="date">2020 – May 2025</p>
+    <h3>
+      Bachelor of Science in Industrial
+      and Systems Engineering
+    </h3>
+    <p>University of Jeddah, Saudi Arabia</p>
+    <p><strong>GPA: 4.31 / 5.0</strong></p>
+    <p>Second-Class Honours</p>
+  </article>
 </section>
 
-<!-- EXPERIENCE -->
+<!-- PROFESSIONAL EXPERIENCE -->
 
 <section id="experience">
   <h2>Professional Experience</h2>
@@ -464,13 +436,12 @@ footer {
   </div>
 </section>
 
-<!-- PROJECTS & AWARDS -->
+<!-- PROJECTS & ACHIEVEMENTS -->
 
 <section id="projects">
-  <h2>Academic Projects & Achievements</h2>
+  <h2>Academic Projects &amp; Achievements</h2>
 
   <div class="cards">
-
     <article class="card">
       <p class="date">November 2025</p>
       <h3>
@@ -478,17 +449,15 @@ footer {
         Scheduling Optimization
       </h3>
       <p>
-        <strong>
-          Graduation Project — University of Jeddah
-        </strong>
+        <strong>Graduation Project — University of Jeddah</strong>
       </p>
-      <p>Operations Research & GAMS</p>
+      <p>Operations Research &amp; GAMS</p>
 
       <ul>
         <li>
           Developed a multi-objective model
-          to minimize completion time,
-          energy cost, and machine energy consumption.
+          to minimize completion time, energy cost,
+          and machine energy consumption.
         </li>
         <li>
           Built and tested optimization scenarios
@@ -507,7 +476,7 @@ footer {
       <p><strong>OPTIMORE</strong></p>
       <p>
         Awarded the Silver Medal at the International
-        Invention, Innovation & Technology Competition,
+        Invention, Innovation &amp; Technology Competition,
         recognizing innovation and engineering optimization.
       </p>
     </article>
@@ -521,28 +490,27 @@ footer {
     </article>
 
     <article class="card">
-      <h3>Simulation & Quality Control</h3>
+      <h3>Simulation &amp; Quality Control</h3>
       <p>
         Academic projects involving simulation,
         quality control, process analysis,
         and operational improvement.
       </p>
     </article>
-
   </div>
 </section>
 
-<!-- LEADERSHIP -->
+<!-- LEADERSHIP & VOLUNTEERING -->
 
 <section id="leadership">
-  <h2>Leadership & Volunteering</h2>
+  <h2>Leadership &amp; Volunteering</h2>
 
   <div class="cards">
-
     <article class="card">
       <p class="date">January 2025 – May 2025</p>
       <h3>Industrial Engineering Coordinator</h3>
       <p>UJ Engineering Club</p>
+
       <ul>
         <li>
           Coordinated industrial engineering
@@ -559,13 +527,10 @@ footer {
       <p class="date">March 2024 – May 2025</p>
       <h3>Pilgrim Guidance Specialist</h3>
       <p>Aknaf Al-Harmain Team</p>
+
       <ul>
-        <li>
-          Guided and supported groups of pilgrims.
-        </li>
-        <li>
-          Helped ensure a smooth and organized journey.
-        </li>
+        <li>Guided and supported groups of pilgrims.</li>
+        <li>Helped ensure a smooth and organized journey.</li>
       </ul>
     </article>
 
@@ -577,7 +542,6 @@ footer {
         active participation, and leadership.
       </p>
     </article>
-
   </div>
 </section>
 
@@ -588,34 +552,20 @@ footer {
   <h2>My Journey</h2>
 
   <p class="section-description">
-    Every experience has a story.
-    From learning abroad to serving communities
-    and participating in industry events,
-    these moments have shaped my perspective
-    and helped me grow.
+    Every experience has a story. From serving communities
+    to participating in industry events, these moments
+    have shaped my perspective and helped me grow.
   </p>
 
   <div class="timeline">
-
-    <article class="timeline-item">
-      <p class="date">June – August 2022</p>
-      <h3>Learning English in the United Kingdom</h3>
-      <p>
-        Studied at Oxford International English School.
-        An opportunity to experience a different
-        learning environment, develop communication
-        skills, and broaden my perspective.
-      </p>
-    </article>
-
     <article class="timeline-item">
       <p class="date">8 October 2023</p>
       <h3>A Path to a Career in Consulting</h3>
       <p>
-        Attended a panel discussion organized by
-        the Industrial Engineering Club at the
-        University of Jeddah, exploring consulting
-        careers and professional development.
+        Attended a panel discussion organized by the
+        Industrial Engineering Club at the University
+        of Jeddah, exploring consulting careers and
+        professional development.
       </p>
     </article>
 
@@ -639,9 +589,9 @@ footer {
       <h3>Meccan Furqan Campaign</h3>
       <p>
         Participated in serving pilgrims in Mina
-        through administrative and logistical
-        coordination, including accommodation,
-        transportation, scheduling, and support services.
+        through administrative and logistical coordination,
+        including accommodation, transportation,
+        scheduling, and support services.
       </p>
     </article>
 
@@ -664,17 +614,15 @@ footer {
         with students, visitors, and engineers.
       </p>
     </article>
-
   </div>
 </section>
 
-<!-- SKILLS -->
+<!-- SKILLS & LANGUAGES -->
 
 <section id="skills">
-  <h2>Skills & Languages</h2>
+  <h2>Skills &amp; Languages</h2>
 
   <div class="cards">
-
     <article class="card">
       <h3>Technical Skills</h3>
       <div class="tags">
@@ -705,25 +653,24 @@ footer {
         <span>English</span>
       </div>
     </article>
-
   </div>
 </section>
 
 <!-- CERTIFICATES -->
 
 <section id="certificates">
-  <h2>Certificates & Achievements</h2>
+  <h2>Certificates &amp; Achievements</h2>
 
   <p class="section-description">
-    A collection of learning experiences,
-    training achievements, academic participation,
-    and volunteer recognition.
-    Select any available image to view the certificate.
+    A collection of learning experiences, training
+    achievements, academic participation, and volunteer
+    recognition. Select any available image to view
+    the certificate.
   </p>
 
   <div class="cards">
 
-    <!-- NEW CONSULTING CERTIFICATE IMAGE -->
+    <!-- CONSULTING PANEL CERTIFICATE -->
 
     <article class="certificate-card">
       <p class="date">October 2023</p>
@@ -751,7 +698,7 @@ footer {
       </a>
     </article>
 
-    <!-- AOUN CERTIFICATE -->
+    <!-- AOUN VOLUNTEER CERTIFICATE -->
 
     <article class="certificate-card">
       <p class="date">August 2024</p>
@@ -890,10 +837,10 @@ footer {
       </a>
     </article>
 
-    <!-- OXFORD 2022 -->
+    <!-- OXFORD INTERNATIONAL: ONLY ONCE -->
 
     <article class="certificate-card">
-      <p class="date">June – August 2022</p>
+      <p class="date">June 2022 – August 2022</p>
       <h3>Oxford International English School</h3>
       <p>United Kingdom</p>
       <p>English Language Study</p>
@@ -931,7 +878,7 @@ footer {
   </div>
 </section>
 
-<!-- MEMBERSHIP -->
+<!-- PROFESSIONAL MEMBERSHIP -->
 
 <section id="membership">
   <h2>Professional Membership</h2>
@@ -958,21 +905,22 @@ footer {
   </p>
 
   <div class="cards">
-
     <article class="card">
       <h3>Email</h3>
-      <a class="contact-link"
-         href="mailto:Mohammed.k.alrabghi@gmail.com">
+      <a
+        class="contact-link"
+        href="mailto:Mohammed.k.alrabghi@gmail.com">
         Mohammed.k.alrabghi@gmail.com
       </a>
     </article>
 
     <article class="card">
       <h3>GitHub</h3>
-      <a class="contact-link"
-         href="https://github.com/MohammedAlrabghi55"
-         target="_blank"
-         rel="noopener noreferrer">
+      <a
+        class="contact-link"
+        href="https://github.com/MohammedAlrabghi55"
+        target="_blank"
+        rel="noopener noreferrer">
         MohammedAlrabghi55 ↗
       </a>
     </article>
@@ -981,20 +929,20 @@ footer {
       <h3>Location</h3>
       <p>Saudi Arabia</p>
     </article>
-
   </div>
 
   <div class="buttons">
-    <a href="Mohammed_Alrabghi_CV.pdf"
-       class="btn" download>
+    <a
+      href="Mohammed_Alrabghi_CV.pdf"
+      class="btn"
+      download>
       Download My CV
     </a>
   </div>
 </section>
 
 <footer>
-  © 2026 Mohammed Alrabghi.
-  All Rights Reserved.
+  © 2026 Mohammed Alrabghi. All Rights Reserved.
 </footer>
 
 </body>
